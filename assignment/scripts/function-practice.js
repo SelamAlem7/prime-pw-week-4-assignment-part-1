@@ -37,10 +37,26 @@ console.log( 'Multiplying 3 Numbers (2x3x2)', multiplyThree());
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( 3 > 0 ){
+    return    ;
+  }
+
+    return false;
+}
+
+function isPositive( number ) {
+  if ( 0 > 0 ){
     return true;
   }
-    return;
+    return false;
 }
+
+function isPositive( number ) {
+  if ( -3 > 0 ){
+    return true;
+  }
+    return false;
+}
+
 // Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
@@ -50,26 +66,34 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
-function getLast() {
-  let lastThing =  'thing1', 'thing2', 'thing3', 'thing4';
-  return lastThing[3];
-console.log( lastThing.length - 1);
+function getLast( array  ) {
+for( let i = 0; i < array.length; i++ ){
+  if (i === array.length - 1){
+    return array[i];
+  }
 }
-//   let favNumbers = [ 7, 2, 8, 21 ];
-//   let lastItem = (favNumbers[favNumbers.length - 1]);
-//
-// console.log( lastItem);
-// }
+  return undefined;
+}
+
+console.log(getLast([ 'red', 'blue', 'orange', 'yellow']));
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-function find( value, array ){
-
+function find(value, array) {
+   for(let i = 0; i < arrray.length; i++ ) {
+      if(i === array[i]) {
+         return true;
+      }
+   }
+   return false;
 }
 
+let favNumbers = ["2","23","7","17","9"];
+console.log(find("7", favNumbers));
+
 // ----------------------
-// Stretch Goals
+// Stretch Goals - I feel like i need to personally do more practice on these !ß
 // ----------------------
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
